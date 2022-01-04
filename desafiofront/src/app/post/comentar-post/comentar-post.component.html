@@ -1,0 +1,66 @@
+<div class="col-md-12 divCorpo">
+  <div class="col-md-12 post">
+    <h4>Texto</h4>
+    <span> {{ postAtual.texto }} </span>
+    <br />
+    <h4>Link</h4>
+    <span> {{ postAtual.link }} </span>
+  </div>
+  <!--  [readOnly]="habilitado ? true : false" -->
+  <form [formGroup]="formulario" (ngSubmit)="salvar()">
+    <label for="texto" class="form-label">Comentário</label>
+    <textarea
+      formControlName="texto"
+      id="texto"
+      cols="30"
+      rows="5"
+      class="form-control"
+    ></textarea>
+    <br />
+
+    <button class="btn btn-primary" type="submit">Salvar</button>
+    <a
+      class="btn btn-primary"
+      style="margin-left: 20px"
+      routerLink="/listagempost"
+      >Voltar</a
+    >
+  </form>
+
+  <div class="col-md-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Comentário</th>
+          <th scope="col">Edição</th>
+          <th scope="col">Exclusão</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of listComentarios">
+          <td>{{ item.texto }}</td>
+
+
+          <td>
+            <button
+            [disabled]="item.usuario == usuario ? false : true"
+              (click)="alterar(item)"
+              style="border: 0; background-color: transparent"
+            >
+              <i class="bi bi-pencil-square"></i>
+            </button>
+          </td>
+          <td>
+            <button
+            [disabled]="item.usuario == usuario ? false : true"
+              (click)="deletar(item.id)"
+              style="border: 0; background-color: transparent"
+            >
+              <i class="bi bi-trash"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="col-md-12 divCorpo">
+  <form [formGroup]="formulario" (ngSubmit)="salvar()">
+    <label for="texto" class="form-label">Texto</label>
+    <textarea
+      [readOnly]="habilitado ? true : false"
+      formControlName="texto"
+      id="texto"
+      cols="30"
+      rows="10"
+      class="form-control"
+    ></textarea>
+    <br />
+    <label for="link" class="form-label">Link para referência</label>
+    <input
+      type="text"
+      class="form-control"
+      id="link"
+      placeholder="link"
+      formControlName="link"
+      [readOnly]="habilitado ? true : false"
+    />
+
+    <button class="btn btn-primary" [disabled]="habilitado" type="submit">
+      Salvar
+    </button>
+    <a
+      class="btn btn-primary"
+      style="margin-left: 20px"
+      routerLink="/listagempost"
+      >Voltar</a
+    >
+  </form>
+</div>

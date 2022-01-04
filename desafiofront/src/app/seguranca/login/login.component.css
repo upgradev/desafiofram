@@ -1,0 +1,10 @@
+.divForm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.divForm .btn-primary{
+  margin-top: 20px;
+}

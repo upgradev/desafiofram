@@ -1,0 +1,425 @@
+{
+	"info": {
+		"_postman_id": "b21d0c62-6624-4b4d-aa51-ddf2f17c909e",
+		"name": "desafio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Usuario Auth",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"login\": \"fulano\",\n    \"senha\" : \"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Salvar Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"login\": \"fulano\",\n    \"senha\" : 123\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Salvar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmdWxhbm8iLCJleHAiOjE2NDExNjY2NDB9.Vij_SZh_kgNmBjBJnpxybIt0sU0omE_wsmH2UhK6Egow4zBzjAa9CqUAIvnnRYit-BD-D__JCzV21Y2t6sezuQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"texto\": \"Ao texto novo ola mundo novosasdasdasdads\",\n    \"link\" : \"https://www.google.com/\",\n    \"usuario\": 1\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Todos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmdWxhbm8iLCJleHAiOjE2NDEyMTY2MjZ9.tsvokH9mqIKJzsBEKWEX9bGNXJinPZUijtaCWEaKA-YcjQcJj6HVM4G2m75IzX-ybgoTxE5lpBu6GEPx3h84_w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Por Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmdWxhbm8iLCJleHAiOjE2NDExNzgyMjh9.KPn2QKni_oW0zFYH8ReII6xQadeZw0fiOzD4LD_czkDQaOnMz1dsQ2Z0c_OoY8j530pcmjOfljSSd-aTAJW3Gg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/post/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"post",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmdWxhbm8iLCJleHAiOjE2NDExNzA5MDN9.WztaSbzZ3E31LIASQVQS7VwRC5p1an34GfTAc20UNcVsGD3RuBCfZJZZBP97rQONapXf4bhu-IN8sIc1ly9vPg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"texto\": \"teste atualização nova \",\n    \"link\": \"https://www.yahoo.com/\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/post/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"post",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmdWxhbm8iLCJleHAiOjE2NDExNzgyMjh9.KPn2QKni_oW0zFYH8ReII6xQadeZw0fiOzD4LD_czkDQaOnMz1dsQ2Z0c_OoY8j530pcmjOfljSSd-aTAJW3Gg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/post/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"post",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comentario",
+			"item": [
+				{
+					"name": "Salvar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmdWxhbm8iLCJleHAiOjE2NDExNzgyMjh9.KPn2QKni_oW0zFYH8ReII6xQadeZw0fiOzD4LD_czkDQaOnMz1dsQ2Z0c_OoY8j530pcmjOfljSSd-aTAJW3Gg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"texto\": \"Ola mundo novo aqui novo post nada haver\",\n\t\"usuario\": 1,\n    \"post\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/comentario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"comentario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Todos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmdWxhbm8iLCJleHAiOjE2NDExODQ4MTd9.UU5lYGAK9iZrQdbp2j0nz6z8Z9V-dtJRf-12bDHn76gMq3PgWKLio_yq7pfUt5U74jjofvh95WoH-SilOJ7-ew",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/comentario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"comentario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Por Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmdWxhbm8iLCJleHAiOjE2NDExODQxMDN9.COWv788OY3T6bPmVPXdaRmSWCtBsxDRCHKjYfjOhumZ6eOZUvhNA3o-y14Z46oyyTaIzECf3xxdycXJWZmJoZQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/comentario/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"comentario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmdWxhbm8iLCJleHAiOjE2NDExODQxMDN9.COWv788OY3T6bPmVPXdaRmSWCtBsxDRCHKjYfjOhumZ6eOZUvhNA3o-y14Z46oyyTaIzECf3xxdycXJWZmJoZQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/comentario/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"comentario",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmdWxhbm8iLCJleHAiOjE2NDExODQ4MTd9.UU5lYGAK9iZrQdbp2j0nz6z8Z9V-dtJRf-12bDHn76gMq3PgWKLio_yq7pfUt5U74jjofvh95WoH-SilOJ7-ew",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"texto\": \"comentario 8\",\n\t\"usuario\": 1,\n    \"post\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/comentario/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"comentario",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,29 @@
+<div class="col-md-12" style="text-align: center">
+  <h1>Criar Login</h1>
+</div>
+<div class="col-md-12 divForm" >
+  <form [formGroup]="formulario" (ngSubmit)="logar()">
+
+      <label for="login" class="form-label">Login</label>
+      <input
+        type="text"
+        class="form-control"
+        id="login"
+        placeholder="login"
+        formControlName="login"
+      />
+
+      <label for="login" class="form-label">Senha</label>
+      <input
+        type="password"
+        class="form-control"
+        id="senha"
+        placeholder="senha"
+        formControlName="senha"
+      />
+
+
+    <button class="btn btn-primary" type="submit">Criar Login</button>
+  </form>
+
+</div>

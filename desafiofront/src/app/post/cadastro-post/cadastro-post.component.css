@@ -1,0 +1,10 @@
+.divCorpo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.divCorpo .btn-primary{
+  margin-top: 20px;
+}

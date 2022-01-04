@@ -1,0 +1,14 @@
+.divCorpo{
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.divCorpo .btn-primary{
+  margin-top: 20px;
+}
+
+.table tr td{
+  white-space: pre-wrap;
+}
