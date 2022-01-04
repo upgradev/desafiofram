@@ -18,7 +18,9 @@ para baixar as libs do node_modules <br />
 5° Link do web é http://localhost:4200 <br />
 
 # Informações adicionais <br />
+Criar um login antes, depois logar e assim podera fazer as requisições<br />
 O arquivo do POSTMAN com os endpoints estão na raiz como nome desafio.postman_collection.json, caso queira testar sem o front end <br />
 O link do back end esta no padrão http://localhost:8080 quando ele for executado <br />
 o Link do front end esta no padrão http://localhost:4200 quando ele for executado
+
 
